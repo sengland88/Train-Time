@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">    
+
+    <!-- javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    <!-- moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    
+    <title>Employee Info</title>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron jumbotron-fluid jumbo-center">
+        <div class="container">
+          <h1 class="display-4">Train Time</h1>
+          <p class="lead">Your Guide to All Things Trains</p>
+        </div>
+    </div>
+    
+    <div class="card employee-card">
+        <div class="card-body">
+          <h5 class="card-title">Train Time</h5>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (Min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody id="newTrain">
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+​
+      <div class="card input-card">
+        <div class="card-body">
+          <h5 class="card-title">Add a Train</h5>  
+          <form>
+                <div class="form-group">
+                  <label for="exampleFormControlFile1"l class="form-input">Train Name</label>
+                  <input type="text" class="form-control-file" id="train-name-input">
+                  <label for="exampleFormControlFile1"l class="form-input">Destination</label>
+                  <input type="text" class="form-control-file" id="destination-input">
+                  <label for="exampleFormControlFile1"l class="form-input">First Train Time</label>
+                  <input type="text" class="form-control-file" id="train-time-input">
+                  <label for="exampleFormControlFile1"l class="form-input">Frequency</label>
+                  <input type="text" class="form-control-file" id="freq-input">
+                </div>
+                <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+              </form>
+              
+        </div>
+      </div>
+​
+</div>
+
+<script src="assets/javascript/app.js"></script>
+​
+</body>
+</html>
