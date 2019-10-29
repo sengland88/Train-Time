@@ -23,6 +23,10 @@
           <p class="lead">Your Guide to All Things Trains</p>
         </div>
     </div>
+
+    <h2>Next Update in <span id="seconds"></span> Seconds</h2>
+
+    <br>
     
     <div class="card employee-card">
         <div class="card-body">
@@ -32,7 +36,8 @@
               <tr>
                 <th scope="col">Train Name</th>
                 <th scope="col">Destination</th>
-                <th scope="col">Frequency (Min)</th>
+                <th scope="col">First Train Run</th>
+                <th scope="col">Frequency (Min)</th>                
                 <th scope="col">Next Arrival</th>
                 <th scope="col">Minutes Away</th>
               </tr>
@@ -53,7 +58,7 @@
                   <input type="text" class="form-control-file" id="train-name-input">
                   <label for="exampleFormControlFile1"l class="form-input">Destination</label>
                   <input type="text" class="form-control-file" id="destination-input">
-                  <label for="exampleFormControlFile1"l class="form-input">First Train Time</label>
+                  <label for="exampleFormControlFile1"l class="form-input">First Train Time (HH:MM — Military Time)</label>
                   <input type="text" class="form-control-file" id="train-time-input">
                   <label for="exampleFormControlFile1"l class="form-input">Frequency</label>
                   <input type="text" class="form-control-file" id="freq-input">
