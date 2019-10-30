@@ -27,24 +27,43 @@
         let theDestination = $("#destination-input").val().trim()
         let theFirst = $("#train-time-input").val().trim()
         let theFreq = $("#freq-input").val().trim()
+        
+        let timeString = theFirst;
+        let regex = /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/g;
+        let doesMatch = !!(timeString.match(regex)); 
 
-        if (theName === "" || theDestination === "" || theFirst === "" || theFreq === "" ) {
+        console.log(doesMatch);
+
+        if (
+            theName === "" ||        
+            theDestination === "" ||        
+            theFirst === "" || 
+            theFreq === ""
+            ) { 
             console.log("something is empty")
             $("#theMessage").show().text("Please Complete All Fields")
             return
         }
 
-        // if (isNaN(theFirst)) {
-        //     console.log("needs to be a number")
-        //     return
-        // }
+        if (!doesMatch) {
+            console.log("needs to be a number")
+            $("#theFormat").text("Please use the correct format.")
+            return
+        } else {
+            $("#theFormat").hide()
+        }
 
         if (isNaN(theFreq)) {
             console.log("needs to be a number")
+            $("#theFormat2").text("Please use the correct format.")
             return
+        } else {
+            $("#theFormat2").hide()
         }
 
         $("#theMessage").hide()
+        $("#theFormat").hide()
+        $("#theFormat2").hide()
     
         console.log(theName)
         console.log(theDestination)
@@ -56,7 +75,12 @@
             theDestination: theDestination,
             theFirst: theFirst,
             theFreq: theFreq,
-        })    
+        })
+        
+        $("#train-name-input").val("")
+        $("#destination-input").val("")
+        $("#train-time-input").val("")
+        $("#freq-input").val("")
 
     })  
     

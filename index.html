@@ -24,14 +24,13 @@
         <div class="container">
           <p class="lead"><img src="assets/images/banner.jpg" class="img-fluid" alt="Responsive image"></p>
           <p>Welcome to Central Station's Train Scheduler, Instruct.</p>
-          <p>While our train schedule is small, we handle nearly 65,000 citizens every day. Instruct keeps track of our train schedules and refreshes every minute to provide you with the most current information.</p>
-          <p>As new tracks and cars come online, please enter their information in the form below, following the format. Please note that all fields are required in order to submit a train's schedule to our database.</p>
+          <p>While our train schedule is small, we transport nearly 65,000 citizens every day. Instruct keeps track of our train schedules and refreshes every minute to provide you with the most current information.</p>
+          <p>As new tracks and cars come online, please enter their information in the form below. Please note that all fields are required in order to submit a train's schedule to our database.</p>
           <p>If you experience problems, please contact our HelpDesk at 407-555-5555, extension HELP (4357).</p>
-          <p>-Management</p>
         </div>
     </div>
 
-    <h2>Next Schedule Update in <span id="seconds"></span></h2>
+    <h2>Next Schedule Update in <span class="correctFormat"  id="seconds"></span></h2>
 
     <br>
     
@@ -68,10 +67,10 @@
                   <label for="exampleFormControlFile1"l class="form-input">Destination</label>
                   <input type="text" placeholder="EX: Destin, Florida" class="form-control-file" id="destination-input">
                   <br>
-                  <label for="exampleFormControlFile1"l class="form-input">First Train Time (HH:MM — Military Time)</label>
+                  <label for="exampleFormControlFile1"l class="form-input">First Train Time (HH:MM — Military Time) <span id="theFormat" class="correctFormat" ></span></label>
                   <input type="text" placeholder="EX: 13:00"  class="form-control-file" id="train-time-input">
                   <br>
-                  <label for="exampleFormControlFile1"l class="form-input">Frequency (mins)</label>
+                  <label for="exampleFormControlFile1"l class="form-input">Frequency (mins) <span class="correctFormat" id="theFormat2"></span></label>
                   <input type="text" placeholder="EX: 32" class="form-control-file" id="freq-input">
                 </div>
                 <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>

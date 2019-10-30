@@ -12,6 +12,6 @@ h2 {
     text-align: right;
 }
 
-#seconds {
+.correctFormat {
     color: red;
 }
