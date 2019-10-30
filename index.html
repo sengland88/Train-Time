@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>    
+<head>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">    
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="assets/css/style.css">  
 
     <!-- javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,25 +16,29 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
     
-    <title>Employee Info</title>
+    <title>Train Schedule</title>
 </head>
 <body>
-<div class="container">
+<div class="container column">
     <div class="jumbotron jumbotron-fluid jumbo-center">
         <div class="container">
-          <h1 class="display-4">Train Time</h1>
-          <p class="lead">Your Guide to All Things Trains</p>
+          <p class="lead"><img src="assets/images/banner.jpg" class="img-fluid" alt="Responsive image"></p>
+          <p>Welcome to Central Station's Train Scheduler, Instruct.</p>
+          <p>While our train schedule is small, we handle nearly 65,000 citizens every day. Instruct keeps track of our train schedules and refreshes every minute to provide you with the most current information.</p>
+          <p>As new tracks and cars come online, please enter their information in the form below, following the format. Please note that all fields are required in order to submit a train's schedule to our database.</p>
+          <p>If you experience problems, please contact our HelpDesk at 407-555-5555, extension HELP (4357).</p>
+          <p>-Management</p>
         </div>
     </div>
 
-    <h2>Next Update in <span id="seconds"></span> Seconds</h2>
+    <h2>Next Schedule Update in <span id="seconds"></span></h2>
 
     <br>
     
     <div class="card employee-card">
         <div class="card-body">
-          <h5 class="card-title">Train Time</h5>
-          <table class="table">
+          <h5 class="card-title">The Train Schedule</h5>
+          <table class="table text-center">
             <thead>
               <tr>
                 <th scope="col">Train Name</th>
@@ -51,17 +58,21 @@
 ​
       <div class="card input-card">
         <div class="card-body">
-          <h5 class="card-title">Add a Train</h5>  
+          <h5 class="card-title">Add a Train</h5>
+          <h3 id="theMessage"></h3>
           <form>
                 <div class="form-group">
                   <label for="exampleFormControlFile1"l class="form-input">Train Name</label>
-                  <input type="text" class="form-control-file" id="train-name-input">
+                  <input type="text" placeholder="Ex: Train Name" class="form-control-file" id="train-name-input">
+                  <br>
                   <label for="exampleFormControlFile1"l class="form-input">Destination</label>
-                  <input type="text" class="form-control-file" id="destination-input">
+                  <input type="text" placeholder="EX: Destin, Florida" class="form-control-file" id="destination-input">
+                  <br>
                   <label for="exampleFormControlFile1"l class="form-input">First Train Time (HH:MM — Military Time)</label>
-                  <input type="text" class="form-control-file" id="train-time-input">
-                  <label for="exampleFormControlFile1"l class="form-input">Frequency</label>
-                  <input type="text" class="form-control-file" id="freq-input">
+                  <input type="text" placeholder="EX: 13:00"  class="form-control-file" id="train-time-input">
+                  <br>
+                  <label for="exampleFormControlFile1"l class="form-input">Frequency (mins)</label>
+                  <input type="text" placeholder="EX: 32" class="form-control-file" id="freq-input">
                 </div>
                 <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
               </form>

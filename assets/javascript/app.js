@@ -1,6 +1,8 @@
     let trainInfo = []
     let seconds = 60
 
+    $("#theMessage").hide()
+
     let refreshTrains = setInterval(timerUpdate, 1000)
     
     var firebaseConfig = {
@@ -28,6 +30,7 @@
 
         if (theName === "" || theDestination === "" || theFirst === "" || theFreq === "" ) {
             console.log("something is empty")
+            $("#theMessage").show().text("Please Complete All Fields")
             return
         }
 
@@ -40,6 +43,8 @@
             console.log("needs to be a number")
             return
         }
+
+        $("#theMessage").hide()
     
         console.log(theName)
         console.log(theDestination)
@@ -115,7 +120,12 @@
 
         seconds--
 
-        $("#seconds").text(seconds)
+        $("#seconds").text(`${seconds} Seconds`)
+
+        if (seconds === 1) {
+            $("#seconds").text(`${seconds} Second`)
+        }
+
         if (seconds === 0) {
             seconds = 60
             processTrainData()            

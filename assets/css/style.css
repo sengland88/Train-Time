@@ -1,0 +1,17 @@
+body {
+    background-color: #F2F3F5;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+}
+
+.column {
+    background-color: white;
+}
+
+h2 {
+    text-align: right;
+}
+
+#seconds {
+    color: red;
+}
