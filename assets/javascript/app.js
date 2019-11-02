@@ -1,8 +1,7 @@
     let trainInfo = []
     let seconds = 60
 
-    $("#theMessage").hide()
-
+    
     let refreshTrains = setInterval(timerUpdate, 1000)
     
     var firebaseConfig = {
@@ -29,7 +28,7 @@
         let theFreq = $("#freq-input").val().trim()
         
         let timeString = theFirst;
-        let regex = /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/g;
+        let regex = /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/g; //created regex with the help of my tutor to validate that the time input was correctly inputted
         let doesMatch = !!(timeString.match(regex)); 
 
         console.log(doesMatch);
